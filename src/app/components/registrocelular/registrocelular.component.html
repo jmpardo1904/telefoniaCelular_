@@ -1,0 +1,43 @@
+<div class="container-principal animated fadeIn fast">
+<form #f="ngForm" (ngSubmit)="registroCel(f)">
+
+    <div class="form-group">
+        <label for="nombre">Nombre</label>
+        <input type="nombre" class="form-control" id="nombre" aria-describedby="nombre" placeholder="Ingrese su nombre"
+            name="nombre" [(ngModel)]="usuario.nombre" required>
+        <span *ngIf="f.submitted && f.controls['nombre'].errors">Ingrese el nombre</span>
+
+    </div>
+
+    <div class="form-group">
+        <label for="apellido">Apellido</label>
+        <input type="apellido" class="form-control" id="apellido" aria-describedby="apellido"
+            placeholder="Ingrese su apellido" name="apellido" [(ngModel)]="usuario.apellido "required>
+            <span *ngIf="f.submitted && f.controls['apellido'].errors">Ingrese el apellido</span>
+    </div>
+
+    <div class="form-group">
+        <label for="telefonofijo">Telefono fijo</label>
+        <input type="telefonofijo" class="form-control" id="telefonofijo" aria-describedby="telefonofijo"
+            placeholder="Ingrese su telefono fijo" name="telefonofijo" [(ngModel)]="usuario.telefonoFijo" required>
+        <span *ngIf="f.submitted && f.controls['telefonofijo'].errors">ingrese un telefono fijo</span>
+
+    </div>
+
+    <div class="form-group">
+        <label for="fechanacimiento">Fecha nacimiento</label>
+        <input type="date" class="form-control" id="fechanacimiento" name="fechanacimiento" [(ngModel)]="usuario.fechaNacimiento" required>
+        <span *ngIf="f.submitted && f.controls['fechanacimiento'].errors">ingrese su fecha de nacimiento</span>
+
+    </div>
+
+    <div class="form-group">
+        <label for="cedula">Cedula</label>
+        <input type="cedula" class="form-control" id="cedula" aria-describedby="cedula" placeholder="Ingrese su cedula" name="cedula" [(ngModel)]="usuario.cedula" required>
+        <span *ngIf="f.submitted && f.controls['cedula'].errors">ingrese su cedula</span>
+    
+    </div>
+
+    <button type="submit" class="btn btn-primary">Registrar</button>
+</form>
+</div>
