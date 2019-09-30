@@ -29,7 +29,7 @@ def register():
 
     conn = pymysql.connect(
     host="localhost", port=3306, user="root",
-    passwd="", db="telefonia2")
+    passwd="", db="telefoniacelular")
     cursor = conn.cursor()
     cursor.execute("INSERT INTO persona VALUES (%s,%s,%s,%s,%s)", (pnombre,papellidos,ptelefonofijo,pfechadenacimiento,pcedula))
     conn.commit()
@@ -60,7 +60,7 @@ def register2():
 
     conn = pymysql.connect(
     host="localhost", port=3306, user="root",
-    passwd="", db="telefonia2")
+    passwd="", db="telefoniacelular")
     cursor = conn.cursor()
     cursor.execute("INSERT INTO linea VALUES (%s,%s,%s)", (lineanumero,cedula,estado))
     conn.commit()
@@ -95,7 +95,7 @@ def register4():
 
     conn = pymysql.connect(
     host="localhost", port=3306, user="root",
-    passwd="", db="telefonia2")
+    passwd="", db="telefoniacelular")
     cursor = conn.cursor()
     cursor.execute("INSERT INTO equipo VALUES (%s,%s,%s,%s,%s)", (estadoEquipo,lineaNumero,marcaEquipo,descripcionEquipo,estadoEquipo))
     conn.commit()
